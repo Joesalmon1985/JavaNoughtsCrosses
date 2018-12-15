@@ -1,0 +1,6 @@
+public class JavaNoughtsCrosses
+{
+    public static void main (String[] args )
+    {
+    }
+}

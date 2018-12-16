@@ -10,7 +10,7 @@ public class Board
 
     public void clearBoard()
     {
-        for(int line = 0 ; line < 3 ; line++)
+        for(int line=0 ; line<3 ; line++)
             for(int column=0 ; column <3 ; column++)
                 Board[line][column]=0;
     }
@@ -44,9 +44,9 @@ public class Board
     public void setPosition(int[] attempt, int player)
     {
         if(player ==1)
-            Board[attempt[0]][attempt[1]] = -1;
+            Board[attempt[0]][attempt[1]]=-1;
         else
-            Board[attempt[0]][attempt[1]] = 1;
+            Board[attempt[0]][attempt[1]]=1;
     }
 
     public int checkLines()
@@ -60,7 +60,35 @@ public class Board
         }
         return 0;
     }
-            
 
+    public int checkColumns()
+    {
+        for(int column=0 ; column<3 ; column++)
+        {
+            if( (Board[0][column] + Board[1][column] + Board[2][Column]) == -3)
+                return -1;
+            if( (Board[0][column] + Board[1][column] + Board[2][Column]) == 3)
+                return 1;
+        }
+        return 0;
     }
+
+    public int checkDiagonals()
+    {
+        if( (Board[0][0] + Board[1][1] + Board[2][2]) == -3)
+            return -1;
+        if( (Board[0][0] + Board[1][1] + Board[2][2]) == 3)
+            return 1;
+        if( (Board[0][2] + Board[1][1] + Board[2][0]) == -3)
+            return -1;
+        if( (Board[2][0] + Board[1][1] + Board[0][2]) == 3)
+            return 1;
+        return 0;
+    }
+
+
+
+        
+
+    
 }

@@ -86,6 +86,15 @@ public class Board
         return 0;
     }
 
+    public boolean fullBoard()
+    {
+        for(int line=0 ; line<3 ; line++)
+            for(int column-0 ; column<3 ; column++)
+                if( Board[line][column]==0 )
+                    return false;
+        return true;
+    }
+
 
 
         

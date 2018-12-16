@@ -13,7 +13,7 @@ public class Game
         board = new Board();
         startPlayers();
 
-        while( Player());
+        while( Play());
     }
 
     public void startPlayers()
@@ -52,16 +52,16 @@ public class Game
         return option;
     }
 
-    public booleam Play()
+    public boolean Play()
     {
         board.showBoard();
         if(won() == 0)
         {
             System.out.println("----------------------------");
             System.out.println("\nTurn "+turn);
-            System.out.println("It's turn of Player " + who() );
+            System.out.println("It's turn of Player " + who );
 
-            if(who()==1)
+            if(who ==1)
                 player1.play(board);
             else
                 player2.play(board);
@@ -107,40 +107,3 @@ public class Game
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}

@@ -40,7 +40,7 @@ public class Human extends Player
                 if(attempt[1] > 3 || attempt[1] < 1)
                     System.out.println("Invalid column. It's 1, 2 or 3");
             }
-            while attempt(attempt[1] > 3 || attempt[1] < 1);
+            while(attempt[1] > 3 || attempt[1] < 1);
             
             attempt[0]--;
             attempt[1]--;
@@ -52,31 +52,3 @@ public class Human extends Player
     }
 }
                
-
-                       
-                        input.nextInt();
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -20,25 +20,30 @@ public class Board
         System.out.println();
         for(int line=0 ; line<3 ; line++)
         {
-            if(Board[line][column]==-1)
+            for(int column=0 ; column<3 ; column++)
             {
-                System.out.print("-1");
+
+                if(Board[line][column]==-1)
+                {
+                    System.out.print("-1");
+                }
+                if(Board[line][column]==1)
+                {
+                    System.out.print("1");
+                }
+                if(Board[line][column]==0)
+                {
+                    System.out.print("0");
+                }
+                System.out.println();
             }
-            if(Board[line][column]==1
-            {
-                System.out.print("1");
-            }
-            if(Board[line][column]==0)
-            {
-                System.out.print("0");
-            }
-            System.out.println();
         }
+
     }
 
     public int getPosition(int[] attempt)
     {
-        return Board[attempt[0]][attempt[1]]
+        return Board[attempt[0]][attempt[1]];
     }
 
     public void setPosition(int[] attempt, int player)
@@ -55,7 +60,7 @@ public class Board
         {
             if( (Board[line][0] + Board[line][1] + Board[line][2]) == -3)
                 return -1;
-            if( (Board[line][0] + Board[line][1] + Board[line[2]) == 3)
+            if( (Board[line][0] + Board[line][1] + Board[line][2]) == 3)
                 return 1;
         }
         return 0;
@@ -65,9 +70,9 @@ public class Board
     {
         for(int column=0 ; column<3 ; column++)
         {
-            if( (Board[0][column] + Board[1][column] + Board[2][Column]) == -3)
+            if( (Board[0][column] + Board[1][column] + Board[2][column]) == -3)
                 return -1;
-            if( (Board[0][column] + Board[1][column] + Board[2][Column]) == 3)
+            if( (Board[0][column] + Board[1][column] + Board[2][column]) == 3)
                 return 1;
         }
         return 0;
@@ -89,15 +94,9 @@ public class Board
     public boolean fullBoard()
     {
         for(int line=0 ; line<3 ; line++)
-            for(int column-0 ; column<3 ; column++)
+            for(int column = 0 ; column<3 ; column++)
                 if( Board[line][column]==0 )
                     return false;
         return true;
-    }
-
-
-
-        
-
-    
+    }    
 }

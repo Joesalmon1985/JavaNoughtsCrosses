@@ -17,7 +17,7 @@ public class Board
 
     public void showBoard()
     {
-        System.out.println();
+        System.out.println("----------------");
         for(int line=0 ; line<3 ; line++)
         {
             for(int column=0 ; column<3 ; column++)
@@ -29,14 +29,15 @@ public class Board
                 }
                 if(Board[line][column]==1)
                 {
-                    System.out.print("1");
+                    System.out.print("+1");
                 }
                 if(Board[line][column]==0)
                 {
-                    System.out.print("0");
+                    System.out.print("00");
                 }
-                System.out.println();
+                System.out.print("|");
             }
+            System.out.println();
         }
 
     }

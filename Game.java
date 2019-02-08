@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Game 
+public class Game
 {
     private Board board;
     private int turn=1, who=1;
@@ -30,7 +30,7 @@ public class Game
             this.player2 = new Human(2);
         else
             this.player2 = new Computer(2);
-        
+
     }
 
     public int choosePlayer()
@@ -110,4 +110,3 @@ public class Game
         return 0;
     }
 }
-

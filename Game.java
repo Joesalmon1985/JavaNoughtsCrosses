@@ -72,6 +72,10 @@ public class Game
                 return false;
             }
             who++;
+            if (who > 2)
+            {
+            	who = 1;
+            }
             turn++;
 
             return true;
